@@ -1,0 +1,208 @@
+body{
+    background: url(assets/background.jpg);
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    color: white;
+    user-select: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#gradient {
+    background: linear-gradient(to bottom, rgba(71, 60, 46, 0.2)  ,rgba(71, 60, 46, 0.5) 100%);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#main{
+    position: absolute;
+    border-radius: 20px;
+    top: 10%;
+    height: 70%;
+    width: 70%;
+    border-bottom: 10px solid rgb(192, 183, 176);
+    background-color: rgb(255, 243, 233);
+    padding: 50px;
+}
+
+#title{
+    font-size: 4rem;
+    letter-spacing: 3px;
+}
+
+.bingo-container {
+    float: right;
+    width: 90vmin; 
+    height: 90vmin;
+    max-width: 40rem;
+    padding: 5px;
+    border-radius: 10px;
+    max-height: 40rem;
+    background-color: rgb(192, 183, 176);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .bingo-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    width: 100%;
+    height: 100%;
+  }
+  
+  .bingo-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3px;
+    font-size: calc(3vmin);
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgb(255, 251, 247);
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .bingo-box:hover {
+    background-color: rgb(155, 146, 139);
+    color: white;
+  }
+
+#pool {
+    float: left;
+    border-radius: 20px;
+    background-color: rgb(192, 183, 176);
+    width: 3rem;
+    padding: 10px;
+    height: 40rem;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column-reverse;
+    gap: 10px;
+    overflow: hidden;
+}
+    .ball{
+        margin-top: 22px;
+        border-radius: 50%;
+        background-color: rgb(255, 251, 247);
+        width: 3rem;
+        min-height: 3rem;
+        box-shadow: 2px 2px 5px rgba(0,0,0, 0.6);
+        border: none;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .ball:hover{
+        background-color: rgb(248, 243, 238);
+        scale: 1.05;
+    }
+
+#titleCon {
+    position: absolute;
+    background-color: rgb(192, 183, 176);
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 60px;
+    width: 32rem;
+    height: 6rem;
+    margin-top: 15px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#equaCon{
+    position: absolute;
+    background-color: rgb(192, 183, 176);
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 60px;
+    width: 32rem;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 170px;
+}
+#equation {
+    filter: invert(1) brightness(2) drop-shadow(0 0 white) drop-shadow(0 0 white); 
+    position: absolute;
+    scale: 2;
+  }
+  
+  #equation .fraction {
+    margin-left: 20px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  #equation .numerator {
+    display: block;
+    border-bottom: 2px solid white;
+    padding: 0 5px;
+  }
+  
+  #equation .denominator {
+    display: block;
+  }
+  
+  #equation sub {
+    position: absolute;
+    bottom: 70px;
+    left: 132px;
+    font-size: 2rem;
+    vertical-align: baseline;
+  }
+  
+#rollButton{
+    position: absolute;
+    background-color: rgb(192, 183, 176);
+    padding: 10px;
+    border-radius: 10px;
+    bottom: 0;
+    margin-bottom: 4.5rem;
+    width: 32rem;
+    margin-left: 70px;
+    border: none ;
+    height: 10rem;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+#rollButton:hover {
+    scale: 1.05;
+    background-color: rgb(167, 159, 153);
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.shake {
+  animation: shake 0.5s ease forwards;
+}
+
+.red {
+  background-color: red !important;
+}
